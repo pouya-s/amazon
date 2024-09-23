@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+        {% block content %}
+
+            <form class="search-form" method="post" action="scrap" style="text-align: center">
+                 {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" class="form-control" name="search_term" id="searchInput" placeholder="Enter your search query">
+                </div>
+                <input class="btn btn-primary" type="submit" value="Search">
+            </form>
+{% endblock content %}
+
